@@ -86,6 +86,11 @@ let printaVelocidade = velocidade => console.log(`Nova velocidade: ${velocidade}
 
 let novaVelocidade = dobraVelocidade(60,printaVelocidade)
 
+explicando:  Temos a função dobraVelocidade que recebe dois parametros, velocidade e printa,  sendo que printa, na vdd, é uma outra função externa, que chamamos de callback. veja ela em ação  na variavek printaVelocidade e depois sendo chamada em novaVelocidade ;)
+
+outra forma de faze-la tbm seria com arrowfunction
+
+let outraVelocidade = dobraVelocidade(60, velocidade => console.log(`Outra velocidade ${velocidade}`); //esse parametro velocidade ele veio já da dobraVelocidade. que no caso tá sendo o printa... só mudei o nome ;)
 
 */
 
