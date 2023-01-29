@@ -112,7 +112,15 @@ FUNÇÃO .MAP() -- Ela serve para você interar um array em um novo array com mo
  
     console.log(numerosMultiplicados); // [400,270,70,125,110,0,25,50,495]
 
+FUNÇÃO .FILTER() -- Ela serve como o prórpio nome já diz, filtrar. Ela busca elementos pré-determinados.
+    ex:
+    let nomes = ['ruan', 'yasmin', 'arthur', 'lindesberg' , 'jessiara' , 'judiscleide'];
+    let grandesNomes = nomes.filter(elementos => { return elementos.length > 8 }); // vai retornar ['lindesberg', 'jhessiara' , 'judiscleide']
+
+FUNÇÃO FIND() --  IGUALMENTE AO FILTER(),   unica diferença é que ele retorna apenas o primeiro, já o filter() retorna todos que são true 
+ex:
+    let nomes = ['ruan', 'yasmin', 'arthur', 'lindesberg' , 'jessiara' , 'judiscleide'];
+    let grandesNomes = nomes.filter(elementos => { return elementos.length > 8 }); // vai retornar apenas,['lindesberg'],  pois é o primeiro a ser encontrado 
 
 
-    
 */
