@@ -37,7 +37,7 @@ tirando a brincadeira, o mais ideal é semre observamos a estrutura do código e
 
 Existe tambem as funções anônimas, elas se utilizam das váriaveis para existirem, olha o exemplo.
 
-let velocidadeDobrada = function (velocidade){
+const velocidadeDobrada = function (velocidade){ //lembrando que velocidade é apenas um parametro.
     return velocidade * 2
     }
 
@@ -50,6 +50,23 @@ já que estamos falando de scopo, ainda tem as questão das váriaveis.
 
 var é escopo global, let nem tanto... Let dentro de função, fica limitada a função...
 
+Bom agora chegamos nas ArrowFunctions.  que é quase a mesma coisa que as funções anonimas. pega o exemplo.
+elas são construidas mais facilmente.
+
+const velocidadeDobrada = (velocidade) => {                 //lembrando que velocidade é apenas um parametro.
+    return velocidade * 2
+    }
+
+    mas você sabia que tem como simplificar? 
+
+const velocidadeDobrada = (velocidade) => return velocidade * 2     
+// agora to chamando sem as chaves(funciona quando temos apenas um return)
+
+se houver só um parametro e um retorno, tem como simplificar mais ainda.
+
+const velocidadeDobrada = velocidade => return velocidade * 2
+
+Por hora, é apena isso, mas já sabemos que temos mais coisas pra estudar, principalmente suas particularidades.
 
 
 
