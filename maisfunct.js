@@ -90,7 +90,7 @@ explicando:  Temos a função dobraVelocidade que recebe dois parametros, veloci
 
 outra forma de faze-la tbm seria com arrowfunction
 
-let outraVelocidade = dobraVelocidade(60, velocidade => console.log(`Outra velocidade ${velocidade}`); //esse parametro velocidade ele veio já da dobraVelocidade. que no caso tá sendo o printa... só mudei o nome ;)
+let outraVelocidade = dobraVelocidade(60, printa => console.log(`Outra velocidade ${printa}`)); //esse parametro velocidade ele veio já da dobraVelocidade.
 
 */
 
