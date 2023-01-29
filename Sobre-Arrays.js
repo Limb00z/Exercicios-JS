@@ -73,4 +73,16 @@ METODOS SPLICE E SLICE
     **obs-- Não é obrigatória acrescentar elemento para substituição. apenas quis exemplificar. poderia ser assim também que funcionaria como o ex abaixo.
     numeros.splice(1,2); // removerá a partir da posição 1, 2 elementos...
 
-*/
+    SLICE -- Significa fatiar ou dividir.
+    Ele extrai uma parte do array, mas sem alterar o array original.
+    Ele espera um primeiro parametro que é um indice/posição do array, o segundo é o índice final.
+    Ele retorna todos os elementos entre o primeiro e segundo parametro.
+    obs** - No segundo parametro, ele para antes... ex, se eu edir slice(1,4) ele vai pegar os elementos nos indices [1,2,3] e não exatamente até o 4... entendeu a sacada ? ex
+
+    let numeros [80,54,14,25,22,0,5,10,99];
+
+    let removeSemAlterar = numeros.slice(2,5); // vai retornar um array com os valores [14,25,22]
+
+  
+  
+     */
