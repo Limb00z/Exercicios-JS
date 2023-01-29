@@ -68,6 +68,23 @@ const velocidadeDobrada = velocidade => return velocidade * 2
 
 Por hora, é apena isso, mas já sabemos que temos mais coisas pra estudar, principalmente suas particularidades.
 
+VAMOS FALAR SOBRE HIGH URDER FUNCTIONS
+- HOF = FUNÇÃO DE ALTA CLASSE
+- São funções que recebem ou retornam outras funções
+- As funções que HOF recebem, geralmente são anônimas, **podendo ser uma Arrow Function ou não**
+- A função que é enviada como parametro de uma HOF é chamada de Callback
+
+Olha o exemplo complicado e doido kkk
+
+function dobraVelocidade (velocidade,printa){
+    let novaVelocidade = velocidade *2;
+    printa(novaVelocidade) //<<<< callback
+    return novaVelocidade
+}
+
+let printaVelocidade = velocidade => console.log(`Nova velocidade: ${velocidade}km/s`)
+
+let novaVelocidade = dobraVelocidade(60,printaVelocidade)
 
 
 */
