@@ -57,5 +57,20 @@ mas e seu quiser apenas um elemento, por exemplo, apenas o ddd basta adicionar m
 console.log(estadoDDD[2][1]); // vai retornar 31 .... ou seja, na posição 2 está o estado e ddd, mas dentro dele na posição 1 apenas o ddd... entendeu?
 
 
+METODOS SPLICE E SLICE
+
+    SPLICE -- Significa emendar ou costurar, substitui o array original.
+    Ele espera um primeiro parametro que é um indice/posição do array, o segundo é a quantidade de elementos que queremos remover a partir desse indíce os próximos parametros são elementos que queremos add no lugar, obs** apenas o primeiro parametro é "obrigatório"
+    ex: 
+    let numeros = [40,10,25,13,4,85];
+    numeros.splice(1,2,50,30); // vai remover do array o 10 e 25, porque estão na posição 1 e 2 valores... ou seja a partir da posição 1 remova 2... 10 e 25. E ele add o numero 50 e 30 em seus lugares.
+
+    podemos atribuir também os valores retirados.
+    vamos desconsiderar o código acima p/ ex
+
+    let removidos = numeros.splice(1,2,50,30); // aqui ele vai executar como anterirormente explicado, mas ainda vai add esses valores a váriavel Removidos.
+
+    **obs-- Não é obrigatória acrescentar elemento para substituição. apenas quis exemplificar. poderia ser assim também que funcionaria como o ex abaixo.
+    numeros.splice(1,2); // removerá a partir da posição 1, 2 elementos...
 
 */
