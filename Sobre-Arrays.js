@@ -41,8 +41,20 @@ let posiDez = numeros.indexOf(10); // ele vai retornar para a váriavel posiDez 
 
 mas e se por acaso não encontrar o elemento, seja por erro de escrita ou por inexistencia... ele retorna o valor -1
 
+ARRAYS BIDIMENSIONAIS -- Em suma, eles são arrays, dentro de arrays.
+ex
+let estadoDDD = [ ['rj' , 21] , ["sp" , 11] , ['mg' , 31] , ['ce' , 85] ]  
 
+sendo assim, pdoemos fazer tudo normalmente que fáriamos com um array normal, a diferença é que teremos apenas agora mais uma informação para dar nos parametros. segue eo ex.
 
+cada colchete, representa uma posição/indice e dentro dela, cada valor tem sua posição/indice também.
+Se eu quiser por exemplo, resgatar as informações de mg e 31
+
+console.log(estadoDDD[2]); // vai retornar ['mg' , 31]
+
+mas e seu quiser apenas um elemento, por exemplo, apenas o ddd basta adicionar mais um colchete com a posição/indicie
+
+console.log(estadoDDD[2][1]); // vai retornar 31 .... ou seja, na posição 2 está o estado e ddd, mas dentro dele na posição 1 apenas o ddd... entendeu?
 
 
 
