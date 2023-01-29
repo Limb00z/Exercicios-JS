@@ -79,10 +79,40 @@ METODOS SPLICE E SLICE
     Ele retorna todos os elementos entre o primeiro e segundo parametro.
     obs** - No segundo parametro, ele para antes... ex, se eu edir slice(1,4) ele vai pegar os elementos nos indices [1,2,3] e não exatamente até o 4... entendeu a sacada ? ex
 
-    let numeros [80,54,14,25,22,0,5,10,99];
+    let numeros = [80,54,14,25,22,0,5,10,99];
+    let numeros = [80,54,14,25,22,0,5,10,99];
 
     let removeSemAlterar = numeros.slice(2,5); // vai retornar um array com os valores [14,25,22]
 
   
-  
-     */
+  INTERAÇÃO EM ARRAYS
+    AS FUNÇÕES DE INTERAÇÃO QUE VEREMOS SÃO HOF (FUNÇÕES QUE ENVIAMOS COMO PARAMETRO) CALLBACKS
+    callback é chamado para cada elemento do array
+    segue o formato de ex:
+        array.funcaoInterar(function(elementoAtual, indice, array){
+            <corpo da função
+        });
+    Espera um callback que receba como parametro o elemento atual, o indice e o array completo.
+
+    para formalizar um exemplo prático, vamos passar pelo ForEach(revise aula de looping)
+
+    let numeros = [80,54,14,25,22,0,5,10,99];
+    numeros.forEach(function(numero, index){
+        console.log(`Numero: ${numero} e posição: ${index}`)
+    }); // Ele vai retonar cada valor com sua posição 
+
+FUNÇÃO .MAP() -- Ela serve para você interar um array em um novo array com modificações, sem danificar o origninal. 
+    ex. imgina que queremos pegar aqueles numeros acima e multiplicar por 5, teriamos que usar um laço com a estrutura for. Mas com o map dá pra fazer isso usando callback bem mais fácil.
+
+    let numeros = [80,54,14,25,22,0,5,10,99];
+
+    let numerosMultiplicados = numeros.map(function(elementos){
+        return elementos * 5    
+    }) // se dermos um console.log, veremos todos os numeros multiplciados por 5. testa ai
+ 
+    console.log(numerosMultiplicados); // [400,270,70,125,110,0,25,50,495]
+
+
+
+    
+*/
