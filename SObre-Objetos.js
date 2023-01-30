@@ -50,6 +50,22 @@
             alert(`O estado ${dados.estado} usa o ddd (0${dados.ddd})`)
             }); // Muito legal né? Ele vai retornar cada elemento contindo, então, cuidado!!!
 
+        Uma outra coisa legal, só que agora voltando pros objetos, é que podemos ter objetos dentro de objetos também... ex:
+            let foguete = {
+            nome: 'Focus1',
+            tripulantes: 10,
+            capitao: {
+                nome: "Marcos Pontes",
+                patente: "Cel.",
+                idade: "40",
+                tipoSangue: "O+"
+                },
+            decolagemOK: false
+            };
+        
+        E se quisermos acessar o elemento de um objeto, dentro de outro objeto? por exemplo o tipo sanguineo dele? ex:
+
+        console.log(foguete.capitao.tipoSangue); //Vai retornar exatamente o que precisamos. cada ponto, significa uma entrada em profundidade, como no html mudando as pastas na raiz. só que invertido.rs
 
 
 
