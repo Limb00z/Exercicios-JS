@@ -21,6 +21,13 @@
         E se por acaso eu quiser apenas ver o nome? ex:
         console.log(clientes.nome); // natualmente ele vai retornar todos as propriedades nome e seus respectivos valores.
     
+    ADIÇÃO
+        Para podermos add algo nos objetos, é mais fácil que um array simples, não precisa de metódos nem funções.
+        Suponhamos que eu quero add ao objt clientes a propriedade notaDada, ela seria um padrão para medir a qualidade do atendimento, dado pelo próprio cliente. ex:
+        clientes.notaDada = 8; // vualá... adicionamos mais uma propriedade, não precisamos de push nem shift... simples e facil... 
+        mas existe outro jeito também. ex:
+        clientes["dataNascimento"] = 01/01/1994; // pronto, acabamos de add outra propriedade.
+
 
 
 
