@@ -67,7 +67,14 @@
 
         console.log(foguete.capitao.tipoSangue); //Vai retornar exatamente o que precisamos. cada ponto, significa uma entrada em profundidade, como no html mudando as pastas na raiz. só que invertido.rs
 
+        Para finalizar os conceitos básicos, queria falar sobre o this.propriedade ...
+        Ele facilita demais para inclusão com uma função, pois ele já se autoreferencia. ex:
 
+            foguete.combustivel = 0;
+
+            foguete.adicionarCombustivel = function(n){
+                this.combustivel += n;
+            }
 
 
 
