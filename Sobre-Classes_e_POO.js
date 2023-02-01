@@ -87,7 +87,7 @@
                 constructor (nomeNave, tripulacaoTotal, capitaoNome, capitaoIdade, capitaoHorasVooTotal){
                     this.nomeDaNave = nomeNave;
                     this.qtdTripulacao = tripulacaoTotal;
-                    this.capitao = new Capitao (capitaoNome, capitaoIdade,capitaoHorasVooTotal);
+                    this.capitao = new Capitao (capitaoNome, capitaoIdade,capitaoHorasVooTotal);  //instanciando a class acima
                     };
             };                  // criamos uma calss, um molde pros nossos objetos. 
 
