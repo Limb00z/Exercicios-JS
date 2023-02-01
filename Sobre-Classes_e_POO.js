@@ -72,5 +72,21 @@
             golias.aceleracao(50); //velocidade atual, 50
             golias.aceleracao(100); // velocidade atual, 150 ---- somou os 100 com os 50 que já tinha.
 
+    CLASSES DENTRO DE CLASSES
+        Ela segue o mesmo padrão de objetos, até pq é um objeto, meio obvio né? 
+        E para instanciar também é bem simples. olha a criação e como instanciamos. 
+        ex:
+            class EspacoNave {
+                constructor (nomeNave, tripulacaoTotal, capitaoNome, capitaoIdade, capitaoHorasVooTotal){
+                this.nomeDaNave = nomeNave;
+                this.qtdTripulacao = tripulacaoTotal;
+                this.capitao = new Capitao (capitaoNome, capitaoIdade,capitaoHorasVooTotal);
+                };
+            }; // criamos uma calss, um molde pros nossos objetos. 
+
+            let golias = new EspacoNave("Golias", 20, "Vander Stapen", 45, 15000);
+
+            console.log(golias); // Trará um objeto dentro de outro objeto  rs
+
 
 */
