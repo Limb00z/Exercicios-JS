@@ -33,8 +33,24 @@
 
             se dermos um console log, veremos que o observatorio foi criado como um objeto, já tendo as propriedades criadas e seus respectivos valores que passamos como paramêtro na criação, conforme pede o construtor. 
 
-            obs-- O construtor aceita que as váriaveis usem parametro pré definido como nos objetos, caso na criação esteja vazio ele virá preenchido com o padrão de criação. 
+        obs-- O construtor aceita que as váriaveis usem parametro pré definido como nos objetos, caso na criação esteja vazio ele virá preenchido com o padrão de criação. 
+        Temos duas formas de pré-definir.
+        ex:
+            class EstacaoEspacial {
+                constructor (nome){
+                    this.nome = nome
+                    this.velocidade = 0 // Não pedi velocidade como parametro, mas eu digo que ao criar, já contenha o valor 0
+                }
+            };
 
+            //// outra forma \\\\\
+
+            class EstacaoEspacial {
+                constructor (nome,velocidade = 0){
+                    this.nome = nome
+                    this.velocidade = velocidade //aqui eu peço, mas se não for informado, ele já começa com 0.
+                }
+            };
 
 
 */
