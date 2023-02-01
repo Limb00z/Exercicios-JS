@@ -76,17 +76,45 @@
         Ela segue o mesmo padrão de objetos, até pq é um objeto, meio obvio né? 
         E para instanciar também é bem simples. olha a criação e como instanciamos. 
         ex:
+            class  Capitao {
+                constructor(capitaoNome, capitaoIdade,capitaoHorasVooTotal){
+                    this.nomeCapitao = capitaoNome;
+                    this.idadeCapitao = capitaoIdade;
+                    this.horasDeVooCapitao = capitaoHorasVooTotal;}
+                    };
+
             class EspacoNave {
                 constructor (nomeNave, tripulacaoTotal, capitaoNome, capitaoIdade, capitaoHorasVooTotal){
-                this.nomeDaNave = nomeNave;
-                this.qtdTripulacao = tripulacaoTotal;
-                this.capitao = new Capitao (capitaoNome, capitaoIdade,capitaoHorasVooTotal);
-                };
-            }; // criamos uma calss, um molde pros nossos objetos. 
+                    this.nomeDaNave = nomeNave;
+                    this.qtdTripulacao = tripulacaoTotal;
+                    this.capitao = new Capitao (capitaoNome, capitaoIdade,capitaoHorasVooTotal);
+                    };
+            };                  // criamos uma calss, um molde pros nossos objetos. 
 
             let golias = new EspacoNave("Golias", 20, "Vander Stapen", 45, 15000);
 
             console.log(golias); // Trará um objeto dentro de outro objeto  rs
+
+    HERANÇA (extends)
+        Como o nome já diz, é sobre herdar... Quando criamos uma classe, podemos criar outra classe e economizar código herdando os atributo e construtores dela. Isso facilita na criação de códigos semelhantes e agiliza o processo. Para fazer uso de herença, usamos a sintaxe ( class <NomeDaClassNova> extends <ClassHerdada> )
+        ex;
+            class OnibusEspacial extends EspacoNave {
+                autorizadoTransporte = false;
+                transportar() {
+                    this.autorizadoTransporte = true;
+                };
+            };     // estamos herdando todos os atributos de EspacoNave e criando mais um particular atributo com construtor, bora ver?
+
+            let busaoGalatico = new OnibusEspacial ("457 Deprê" , 200 , "Tião" , 65 , 10000); // Na class OnibusEspacial não tem  todos esses atributos que passei como parametro, mas ai que entra a função herdar (extends). 
+
+            busaoGaltico.transportar(); // com isso, eu mudo um parametro incial do OnibusEspacial de false pra true;
+
+            Se dermos um console.log veremos tudo que tem na Class EspacoNave + OnibusEspacial. entendeu?
+
+        
+
+
+
 
 
 */
