@@ -60,9 +60,17 @@
                     this.velocidade = 0 // Não pedi velocidade como parametro, mas eu digo que ao criar, já contenha o valor 0
                 }
                 aceleracao(acelerar){
-                this.velocidade += acelerar // velocidade vai receber o acelerar + o que já tem. 
+                    this.velocidade += acelerar // velocidade vai receber o acelerar + o que já tem. 
                 }
             };
+
+            e para poder chamar será assim:
+            ex:
+
+            let golias = new EstacaoEspacial('Golias'); // aqui atribuo o nome e pré-defino q velocidade será 0.
+                                    
+            golias.aceleracao(50); //velocidade atual, 50
+            golias.aceleracao(100); // velocidade atual, 150 ---- somou os 100 com os 50 que já tinha.
 
 
 */
