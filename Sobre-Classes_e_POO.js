@@ -5,13 +5,35 @@
     **A classe é uum molde utilizado pra criar um objeto.
         dentro da classe nós conseguimos defifnir atributos e métodos que um objeto receberá.
     ex: 
-        Class Nave {
+        class Nave {
         };  // a classe é criada assim. 
 
         let maquinaVoadora = new Nave(); // para chamarmos a classe, temos que usar os parenteses. 
 
     **Conseguimos também alem de aceitar todos os tipos que já conhecemos, (string, number, bolean e etc), Com as classes também podemos criar uma especie de tipo prórpio, digamos, derivado. 
 
+    CONSTRUTORES & INSTÂNCIAS
+        Em grande maioria, as clasees podem ser instanciadas.
+            grande maioria pq algumas linguagens podem impedir isso.
+        Instância de uma classe é o que dá origem ao objeto
+            Quando dizemos que uma classe foi isntanciada, estamos dizendo que um objeto foi criado a partir daquela classe.
+        A classe vêm com um método especial que chamamos de construtor.
+            Utilizamos para definir valores iniciais dos atributos de um objeto.
+            Esse método é chamado quando criamos uma instância de uma classe com a palavra---> new
+        Vamos criar uma classe e um construtor agora para exemplificar.
+        ex:
+            class EstacaoEspacial {
+                constructor(nome,vagasNaPlataforma){
+                    this.nome = nome
+                    this.vagasNaPlataforma = vagasNaPlataforma
+                }
+            }; // Por isso que dizemos que ela serve como um molde, pq a partir dela, criaremos outros objetos conforme o construtor dela. 
+
+            let observatorio = new EstacaoEspacial("Observatório", 40);
+
+            se dermos um console log, veremos que o observatorio foi criado como um objeto, já tendo as propriedades criadas e seus respectivos valores que passamos como paramêtro na criação, conforme pede o construtor. 
+
+            obs-- O construtor aceita que as váriaveis usem parametro pré definido como nos objetos, caso na criação esteja vazio ele virá preenchido com o padrão de criação. 
 
 
 
