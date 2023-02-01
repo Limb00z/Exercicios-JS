@@ -52,5 +52,17 @@
                 }
             };
 
+        Assim como o constructor, que é um método dos objetos, podemos ter mais de um dentro de um objeto. E naturalmente podemos cita-los também. 
+        ex:
+            class EstacaoEspacial {
+                constructor (nome){
+                    this.nome = nome
+                    this.velocidade = 0 // Não pedi velocidade como parametro, mas eu digo que ao criar, já contenha o valor 0
+                }
+                aceleracao(acelerar){
+                this.velocidade += acelerar // velocidade vai receber o acelerar + o que já tem. 
+                }
+            };
+
 
 */
