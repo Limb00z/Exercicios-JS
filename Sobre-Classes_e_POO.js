@@ -110,6 +110,50 @@
             busaoGaltico.transportar(); // com isso, eu mudo um parametro incial do OnibusEspacial de false pra true;
 
             Se dermos um console.log veremos tudo que tem na Class EspacoNave + OnibusEspacial. entendeu?
+    
+    SOBRESCRITA DE MÉTODO
+
+        Nós podemos sobrescrever um metodo já definido para usarmos em uma classe que herdará.
+        ex:
+           class Pessoa {
+                constructor(nome, idade, estado) {
+                    this.nome = nome;
+                    this.idade = idade;
+                    this.estado = estado;
+                }
+                superPoder(tipo) {
+                    this.tipoPoder = tipo;
+                }
+            }
+
+            let ruan = new Pessoa("ruan", 28, "rj");
+
+            console.log(ruan);
+
+            ruan.superPoder("fogo");
+
+            console.log(ruan);
+
+            class PoderZero extends Pessoa {
+                superPoder() {
+                    this.tipoPoder = 0;
+                }
+            }
+
+            let yasmin = new PoderZero("yasmin", 28, "rj");
+
+            console.log(yasmin);
+
+            yasmin.superPoder();
+
+            console.log(yasmin);
+
+            yasmin.superPoder("água"); // mesmo se eu tentar passar um parametro dentro do superPoder, se eu atribuir  uma vairavel a class Pessoa, ela não mudará..
+
+            console.log(yasmin);
+
+
+           
 
         
 
