@@ -152,7 +152,7 @@
 
             console.log(yasmin);
 
-    SUPER -- Serve para sobescrever  e reutilizar o consstructor de uma class
+    SUPER -- A palavra-chave super é usada para acessar o objeto pai de um objeto, em outros casos, é usada para acessar a classe pai de uma classe.
 
 
            
