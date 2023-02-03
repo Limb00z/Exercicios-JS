@@ -152,6 +152,8 @@
 
             console.log(yasmin);
 
+    SUPER -- Serve para sobescrever  e reutilizar o consstructor de uma class
+
 
            
 
