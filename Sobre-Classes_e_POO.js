@@ -154,8 +154,7 @@
 
     SUPER -- A palavra-chave super é usada para acessar o objeto pai de um objeto, em outros casos, é usada para acessar a classe pai de uma classe.
 
-
-           
+           preciso estudar mais sobre SUPER, GET e SET.... batendo cabeça ainda com isso...
 
         
 
