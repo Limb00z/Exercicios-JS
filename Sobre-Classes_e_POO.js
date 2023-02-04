@@ -176,8 +176,33 @@
 
                 console.log(lucas);
 
-        
+    GET & SET   -- o prefixo GET que tem a função de retornar um valor, e outro precedido pela palavra SET que serve para atribuir um valor.
+                EX:
+                    class Carro {
+                        constructor (marca, km, combustivelAtual){
+                            this.marca = marca;
+                            this.km = km;
+                            this.combustivelAtual = combustivelAtual;
+                        }
 
+                        set setComb (v){
+                            if( v < 0 || v > 100){
+                                alert("qtd não suportada")
+                            } else {
+                                this.combustivelAtual = v
+                            };
+                        } 
+
+                        get getComb(){
+                            return this.combustivelAtual
+                        }
+                    }
+
+                    let toro = new Carro('Fiat', 500, 100);
+                    toro.setComb = 50;
+                    console.log(toro.getComb);
+
+            
 
 
 
