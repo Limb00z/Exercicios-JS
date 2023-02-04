@@ -202,8 +202,24 @@
                     toro.setComb = 50;
                     console.log(toro.getComb);
 
-            
+    OBJETOS LITERAIS --    Este é o tipo básico de objetos JavaScript. É o formato popularizado através do JSON (JavaScript Object Notation). O objeto é criado utilizando um par de chaves ({}) e suas propriedades e métodos são todos públicos. Este tipo de objeto também é chamado de objeto estático.
 
+        Todo objeto literal é um objeto único e, mesmo que você armazene ele em diferentes variáveis todas apontarão para o mesmo objeto. No exemplo acima, caso você altere/adicione propriedades em qualquer uma das variáveis (tableless ou tableless2), as modificações valem para ambas.
+
+        Seu uso é recomendado em situações onde não podem existir mais de uma instância do objeto, como por exemplo, objetos de configurações do projeto ou coleções de objetos. Além disso, este tipo de notação é muito utilizado para definir o namespace do seu código JavaScript.     
+
+        delimite as propriedades e métodos com vírgulas dentro do objeto. Uma vírgula final após o último par nome-valor é permitido mas produz erros no IE (sempre o IE), então não faça isso.
+
+        Separe nomes de propriedades e valores com um sinal de dois-pontos :.
+
+            var obj = {
+                a: "",
+                b: "",
+                c: "",
+                funcao1: fucntion (){},
+                funcao2: fucntion (){},
+                funcao3: fucntion (){}
+            };
 
 
 
