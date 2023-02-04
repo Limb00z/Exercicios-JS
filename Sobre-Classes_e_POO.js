@@ -165,11 +165,12 @@
                 class Matheus extends Pessoa {
                     constructor(nomeDiferente, algumaIdade, meuSobrenome) {
                         super(nomeDiferente, algumaIdade);  //As variáveis têm nomes diferentes da classe pai, mas funcionam como uma função normalmente.
+
                         this.sobrenome = meuSobrenome;
                         
                         // Cuidado: como não foi passado um terceiro parâmetro, o atributo 'sexo' dos objetos instanciados terão seu conteúdo como "undefined"
-                    }
-                    }
+                    } ; //precisamos ter atenção a posição dos parametros também do objeto pai.
+                }
 
                 let lucas = new Matheus('rob',3,'segundo');
 
