@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Tipo de Carro</title>
 </head>
 <body>
     <div class="campoForm">
         <label>Nome</label>
-        <input type="text" name="f_nome" id="f_nome" placeholder=".">
+        <input type="text" name="f_nome" id="f_nome" placeholder="-">
     </div>
     <div class="campoForm">
         <label>Portas</label>
-        <input type="number" name="f_portas" id="f_portas" placeholder="0">
+        <input type="number" name="f_portas" id="f_portas" placeholder="-">
     </div>
     <div class="campoForm">
         <label>Blindagem</label>
-        <input type="number" name="f_blindagem" id="f_blindagem" placeholder=".">
+        <input type="number" name="f_blindagem" id="f_blindagem" placeholder="-">
     </div>
     <div class="campoForm">
         <label>Munição</label>
-        <input type="number" name="f_municao" id="f_municao" placeholder=".">
+        <input type="number" name="f_municao" id="f_municao" placeholder="-">
     </div>
     <div class="campoForm">
         <label>Tipo</label>
@@ -29,8 +30,11 @@
             <input type="radio" name="f_tipo" id="f_tipoMilitar" value="m">Militar
         </div>
         <div class="radio">
-            <input type="radio" name="f_tipo" id="f_tipoNormal" value="n">Normal
+            <input type="radio" name="f_tipo" id="f_tipoNormal" value="n" checked>Normal
         </div>
+    </div>
+    <div class="campoForm">
+        <button type="submit" id="btn_addCarro">Adicionar</button>
     </div>
     <div class="carros">
         <!-- <div class="carro"> xxx </div> -->
