@@ -43,4 +43,5 @@
     cursor: pointer;
     padding: 5px;
     border-radius: 5px;
+    text-transform: uppercase;
 }
