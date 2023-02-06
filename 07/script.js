@@ -4,7 +4,12 @@ const f_tipoNormal = document.querySelector("#f_tipoNormal");
 const f_blindagem = document.querySelector("#f_blindagem");
 const f_municao = document.querySelector("#f_municao");
 
+const f_nome = document.querySelector("#f_nome");
+const f_portas = document.querySelector("#f_portas");
+
 const carros = document.querySelector("#carros");
+
+const btn_addCarro = document.querySelector("#btn_addCarro");
 
 let a_carros = [];
 
@@ -23,5 +28,65 @@ f_tipoNormal.addEventListener("click", (evt) => {
 });
 
 const gerenciarExibicaoCarros = () => {
-    
+    carros.innerHTML = "";
+    a_carros.forEach((c) => {
+
+        const div = document.createElement("div");
+        div.setAttribute("class", "carro");
+        div.innerHTML = c.nome;
+        carros.appendChild(div)
+    });
+};
+
+btn_addCarro.addEventListener("click", () => {
+    if (f_tipoNormal.checked) {
+        const c = new Carro(f_nome.value, f_portas.value);
+        a_carros.push(c)
+    } else {
+        const c = new Carro(f_nome.value, f_portas.value, f_blindagem.value, f_municao.value);
+        a_carros.push(c)
+        
+    }
+    gerenciarExibicaoCarros();
+});
+
+
+class Carro { //Classe PAI //BASE
+    constructor(nome, portas) {
+        this.nome = nome;
+        this.portas = portas;
+        this.ligado = false;
+        this.vel = 0;
+        this.cor = undefined;
+    }
+
+    ligar = function () {
+        this.ligado = true
+    }
+
+    desligar = function () {
+        this.ligado = false
+    }
+
+    setCor = function (cor) {
+        this.cor = cor
+    }
 }
+
+class Militar extends Carro{ //classe filho 
+    constructor(nome, portas, blindagem, municao) {
+        super(nome, portas);
+        this.blindagem = blindagem;
+        this.municao = municao;
+        this.setCor("Verde");
+    }
+
+    atirar = function () {
+        if (this.municao > 0) {
+            console.log("Bang");
+            this.municao--;
+        } else {
+            console.log('Você está sem munição soldado...');
+        };
+    };
+};
