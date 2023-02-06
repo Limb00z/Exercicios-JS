@@ -13,6 +13,12 @@ const btn_addCarro = document.querySelector("#btn_addCarro");
 
 let a_carros = [];
 
+const removerCarro = (quem) => {
+    a_carros = a_carros.filter((elemento) => {
+        return elemento.nome != quem;
+    })
+}
+
 f_tipoMilitar.addEventListener("click", (evt) => {
     f_nome.value = "-"
     f_portas.value = "-"
@@ -35,9 +41,19 @@ f_tipoNormal.addEventListener("click", (evt) => {
 
 const gerenciarExibicaoCarros = () => {
     carros.innerHTML = "";
-    a_carros.forEach((c) => {
+    a_carros.map((c, i)=>{            
+        const div =document.createElement('div')
+        const btn=document.createElement('button')
+        btn.innerHTML='Remover'
+        btn.addEventListener('click', (evt)=>{               
+            a_carros.splice(i, 1);
+            gerenciarExibicaoCarros()
+        })
 
-        const div = document.createElement("div");
+        
+
+        
+        div.setAttribute("data-nome", c.nome);
         div.setAttribute("class", "carro");
         div.innerHTML = `Nome: ${c.nome} <br/>`;
         div.innerHTML += `Portas: ${c.portas} <br/>`;
@@ -50,7 +66,9 @@ const gerenciarExibicaoCarros = () => {
         if (c.cor == "Verde") {
             div.innerHTML += `Cor: ${c.cor} <br/>`;
         }
+        div.appendChild(btn)
         carros.appendChild(div);
+        
     });
 };
 
