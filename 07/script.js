@@ -14,6 +14,10 @@ const btn_addCarro = document.querySelector("#btn_addCarro");
 let a_carros = [];
 
 f_tipoMilitar.addEventListener("click", (evt) => {
+    f_nome.value = "-"
+    f_portas.value = "-"
+    f_blindagem.value = "-"
+    f_municao.value = "-"
     console.log("cliquei tipo militar");
     f_blindagem.removeAttribute("disabled")
     f_municao.removeAttribute("disabled")
@@ -21,6 +25,8 @@ f_tipoMilitar.addEventListener("click", (evt) => {
 
 f_tipoNormal.addEventListener("click", (evt) => {
     console.log("cliquei tipo normal");
+    f_nome.value = "-"
+    f_portas.value = "-"
     f_blindagem.value = 0;
     f_municao.value = 0;
     f_blindagem.setAttribute("disabled", "disabled");
@@ -33,7 +39,17 @@ const gerenciarExibicaoCarros = () => {
 
         const div = document.createElement("div");
         div.setAttribute("class", "carro");
-        div.innerHTML = c.nome;
+        div.innerHTML = `Nome: ${c.nome} <br/>`;
+        div.innerHTML += `Portas: ${c.portas} <br/>`;
+        if (c.blindagem > 0) {
+            div.innerHTML += `Blindagem: ${c.blindagem}% <br/>`
+        }
+        if (c.municao > 0) {
+            div.innerHTML += `Munição: ${c.municao} <br/>`
+        }
+        if (c.cor == "Verde") {
+            div.innerHTML += `Cor: ${c.cor} <br/>`
+        }
         carros.appendChild(div)
     });
 };
@@ -43,7 +59,7 @@ btn_addCarro.addEventListener("click", () => {
         const c = new Carro(f_nome.value, f_portas.value);
         a_carros.push(c)
     } else {
-        const c = new Carro(f_nome.value, f_portas.value, f_blindagem.value, f_municao.value);
+        const c = new Militar(f_nome.value, f_portas.value, f_blindagem.value, f_municao.value);
         a_carros.push(c)
         
     }
