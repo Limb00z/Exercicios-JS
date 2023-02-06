@@ -4,7 +4,9 @@ const f_tipoNormal = document.querySelector("#f_tipoNormal");
 const f_blindagem = document.querySelector("#f_blindagem");
 const f_municao = document.querySelector("#f_municao");
 
-let carros = [];
+const carros = document.querySelector("#carros");
+
+let a_carros = [];
 
 f_tipoMilitar.addEventListener("click", (evt) => {
     console.log("cliquei tipo militar");
@@ -19,3 +21,7 @@ f_tipoNormal.addEventListener("click", (evt) => {
     f_blindagem.setAttribute("disabled", "disabled");
     f_municao.setAttribute("disabled", "disabled");
 });
+
+const gerenciarExibicaoCarros = () => {
+    
+}
