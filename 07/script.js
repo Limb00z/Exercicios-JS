@@ -19,8 +19,8 @@ f_tipoMilitar.addEventListener("click", (evt) => {
     f_blindagem.value = "-"
     f_municao.value = "-"
     console.log("cliquei tipo militar");
-    f_blindagem.removeAttribute("disabled")
-    f_municao.removeAttribute("disabled")
+    f_blindagem.removeAttribute("disabled");
+    f_municao.removeAttribute("disabled");
 });
 
 f_tipoNormal.addEventListener("click", (evt) => {
@@ -42,27 +42,27 @@ const gerenciarExibicaoCarros = () => {
         div.innerHTML = `Nome: ${c.nome} <br/>`;
         div.innerHTML += `Portas: ${c.portas} <br/>`;
         if (c.blindagem > 0) {
-            div.innerHTML += `Blindagem: ${c.blindagem}% <br/>`
+            div.innerHTML += `Blindagem: ${c.blindagem}% <br/>`;
         }
         if (c.municao > 0) {
-            div.innerHTML += `Munição: ${c.municao} <br/>`
+            div.innerHTML += `Munição: ${c.municao} <br/>`;
         }
         if (c.cor == "Verde") {
-            div.innerHTML += `Cor: ${c.cor} <br/>`
+            div.innerHTML += `Cor: ${c.cor} <br/>`;
         }
-        carros.appendChild(div)
+        carros.appendChild(div);
     });
 };
 
 btn_addCarro.addEventListener("click", () => {
     if (f_tipoNormal.checked) {
         const c = new Carro(f_nome.value, f_portas.value);
-        a_carros.push(c)
+        a_carros.push(c);
     } else {
         const c = new Militar(f_nome.value, f_portas.value, f_blindagem.value, f_municao.value);
-        a_carros.push(c)
+        a_carros.push(c);
         
-    }
+    };
     gerenciarExibicaoCarros();
 });
 
@@ -74,20 +74,20 @@ class Carro { //Classe PAI //BASE
         this.ligado = false;
         this.vel = 0;
         this.cor = undefined;
-    }
+    };
 
     ligar = function () {
         this.ligado = true
-    }
+    };
 
     desligar = function () {
         this.ligado = false
-    }
+    };
 
     setCor = function (cor) {
         this.cor = cor
-    }
-}
+    };
+};
 
 class Militar extends Carro{ //classe filho 
     constructor(nome, portas, blindagem, municao) {
@@ -95,7 +95,7 @@ class Militar extends Carro{ //classe filho
         this.blindagem = blindagem;
         this.municao = municao;
         this.setCor("Verde");
-    }
+    };
 
     atirar = function () {
         if (this.municao > 0) {
