@@ -47,6 +47,8 @@
                 };
             }; //Estamos criando agora via prototype, um metodo/função para o objeto 
 
+        Um questionamento: Pq usar prototype se podemos criar oq ue queremos, já dentro do escopo, a resposta é que essa função ela é usada para condições posteriores e necessárias.
+
 
 
 */
