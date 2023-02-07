@@ -25,6 +25,8 @@
     .PARSE -- Converte de string JSON, para objeto.
         ex:
             const objeto_pessoa = JSON.parse(string_pessoa); // Pronto, peguei um json e tansformei novamente em OBJETO!
+    
+        Finalizando os estudos básicos!
 
 */
 
