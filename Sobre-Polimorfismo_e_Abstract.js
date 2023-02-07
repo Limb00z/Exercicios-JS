@@ -39,7 +39,7 @@
 
             let c1 = new Carro(2,2);
 
-            c1.info();
+            c1.info(); padrão do pai
 
             class SuperEspecial extends Carro{
                 constructor(estagioTurbo){
@@ -56,7 +56,12 @@
 
             let c2 = new SuperEspecial(3);
 
-            c2.info();
+            c2.info(); //diferente
+
+        E ainda podemos usar o metodo super também em conjunto do polimorfismo!!!!
+    
+    ABSTRACT -- 
+
 
 
 
