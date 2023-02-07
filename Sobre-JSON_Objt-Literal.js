@@ -28,5 +28,25 @@
     
         Finalizando os estudos básicos!
 
-*/
 
+    PROTOTYPE --  É uma função dos objetos para poder adicionar uma propriedade ou metodos dentro deles. podemos usar a vontade, desde criação de propriedades básicas como metodos/funções complexas, que serão adicionadas posteriormente. 
+        ex:
+            const Nave=function (energia){
+                this.energia = energia
+                this.disparos=50
+            }; //criamos o objeto
+
+            const n1 = new Nave(100); criamos uma constante, objeto, com 100 de energia
+
+            nave.prototype.vidas = 5; // Estamos criando mais uma propriedade e atribuindo um valor, estamos modificando o "molde" assim podemos dizer. 
+
+            nave.prototype.disparar = function(){
+                if(this.disparos > 0){
+                    this.disparos--
+                    console.log("bang");
+                };
+            }; //Estamos criando agora via prototype, um metodo/função para o objeto 
+
+
+
+*/
