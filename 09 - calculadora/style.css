@@ -30,7 +30,6 @@
 }
 
 .div_display{
-    
 
 }
 .display{
@@ -56,7 +55,12 @@
     margin: 2px;
 }
 
-.teclaOp{
-    background-color: #f44 !important;
-    border-color: #800 !important;
+#tpower{
+    background-color: rgb(56, 212, 108);
+    border-color: rgb(3, 71, 26);
 }
+.teclaOp{
+    background-color: #f44;
+    border-color: #800;
+};
+
