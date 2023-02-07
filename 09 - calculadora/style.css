@@ -19,6 +19,10 @@
 
 .calc{
     flex-direction: column;
+    background-color: #eee;
+    border: 3px solid #bbb;
+    width: 230px;
+    border-radius: 5px;
 }
 
 .div_nome{
