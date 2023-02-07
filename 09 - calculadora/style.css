@@ -13,20 +13,31 @@
     align-items: center;
 }
 
+.widpadrao{
+    width: 220px;
+}
+
 .calc{
     flex-direction: column;
 }
 
 .div_nome{
-
+    
 }
 
 .div_display{
+    
 
+}
+.display{
+    background-color: #8a8;
+    text-align: right;
+    padding: 5px;
+    font-family: monospace ;
+    font-size: larger;
 }
 
 .div_teclas{
-    width: 220px;
     flex-wrap: wrap;
 }
 
