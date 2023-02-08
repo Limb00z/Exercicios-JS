@@ -26,12 +26,16 @@ let decimal = false;
 teclasNum.forEach((elemento) => {
     elemento.addEventListener("click", (evento) => {
         sinal = false;
+        
         if (tpower.innerHTML == "ON") {
-            if (evento.target.innerHTML == ",") {
+            if (evento.target.innerHTML == ".") {
                 if (!decimal) {
                     decimal = true;
-                    if (display)
+                    if (display.innerHTML == "" || display.innerHTML == "0") {
+                        display.innerHTML = "0."
+                    } else {
                         display.innerHTML += evento.target.innerHTML
+                    }
                 }
             
             } else {
@@ -63,6 +67,14 @@ tlimpar.addEventListener("click", (evento) => {
         display.innerHTML = ""
     }
 });
+
+teclaRes.addEventListener("click", (evento) => {
+    sinal = false;
+    decimal = false;
+    const res = eval(display.innerHTML);
+    display.innerHTML = res;
+    
+})
 
 
 

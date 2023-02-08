@@ -23,14 +23,18 @@
     border: 3px solid #bbb;
     width: 230px;
     border-radius: 5px;
+    margin-top: 100px;
 }
 
-.div_nome{
-    
+.div_nome p{
+    margin: 10px;
+    font-weight: bolder;
+    letter-spacing: 0.3ch;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .div_display{
-
+    overflow-x: hidden;
 }
 .display{
     background-color: #8a8;
