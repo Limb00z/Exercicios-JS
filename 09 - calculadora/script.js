@@ -16,12 +16,25 @@ console.log(tpower);
 const tlimpar = document.querySelector("#tlimpar");
 console.log(tlimpar);
 
+const aba = document.querySelector("#calc_aba");
+console.log(aba);
+
+const calc = document.querySelector("#calc");
+console.log(calc)
+
 let sinal = false;
 
 let decimal = false;
 
 
-
+aba.addEventListener("click", (evento) => {
+    calc.classList.toggle("calc_exibir");
+    if (calc.classList.contains("calc_exibir")) {
+        evento.target.setAttribute("src", "seta_esquerda.svg");
+    } else {
+        evento.target.setAttribute("src", "seta_direita.svg");
+    }
+});
 
 teclasNum.forEach((elemento) => {
     elemento.addEventListener("click", (evento) => {
