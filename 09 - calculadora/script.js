@@ -74,7 +74,11 @@ teclaRes.addEventListener("click", (evento) => {
     const res = eval(display.innerHTML);
     display.innerHTML = res;
     
-})
+});
+
+display.addEventListener("click", (evento) => {
+    navigator.clipboard.writeText(display.innerHTML); 
+}); //Basta clicar no display para copiar o que conter nele.
 
 
 
