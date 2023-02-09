@@ -1,13 +1,27 @@
 const numero = document.getElementById("numero");
 console.log(numero);
 
-let resultado = false;
+let promisse = new Promise((resolvido, rejeitado) => {
+    let resultado = false;
+    let tempo = 3000;
+    setTimeout(() => {
+        if (resultado) {
+            resolvido("Deu tudo certo");
+        } else {
+            rejeitado("Deu tudo errado")
+        }
+    }, tempo);
+});
 
-let tempo = 3000;
+//caso dê certo
+promisse.then();
 
-setTimeout(() => {
-    resultado = true;
-}, tempo);
+//caso dê errado
+promisse.catch();
+
+
+
+
 
 if (resultado) {
     numero.innerHTML = "Deu tudo certo";
