@@ -1,33 +1,42 @@
 const numero = document.getElementById("numero");
 console.log(numero);
 
-let promisse = new Promise((resolvido, rejeitado) => {
-    let resultado = false;
-    let tempo = 3000;
-    setTimeout(() => {
-        if (resultado) {
-            resolvido("Deu tudo certo");
-        } else {
-            rejeitado("Deu tudo errado")
-        }
-    }, tempo);
-});
-
-//caso dê certo
-promisse.then((retorno) => {
-    numero.innerHTML = retorno;
-    numero.classList.remove("erro");
-    numero.classList.add("ok");
-
-});
+const btn_promessa = document.getElementById("btn_promessa");
+console.log(btn_promessa);
 
 
-//caso dê errado
-promisse.catch((retorno) => {
-    numero.innerHTML = retorno;
-    numero.classList.remove("ok");
-    numero.classList.add("erro");
-});
+const promessa = () => {
+    let p = new Promise((resolvido, rejeitado) => {
+        let resultado = true;
+        let tempo = 3000;
+        setTimeout(() => {
+            if (resultado) {
+                resolvido("Deu tudo certo");
+                numero.innerHTML = "Deu tudo certo";
+                numero.classList.remove("erro");
+                numero.classList.add("ok");
+            } else {
+                rejeitado("Deu tudo errado")
+                numero.innerHTML = "Deu tudo errado";
+                numero.classList.remove("ok");
+                numero.classList.add("erro");
+            }
+        }, tempo);
+    });
+
+    
+}
+
+
+
+btn_promessa.addEventListener("click", (evento) => {
+    numero.innerHTML = "Processando...";
+    promessa();
+})
+
+
+
+
 
 
 
@@ -43,4 +52,4 @@ promisse.catch((retorno) => {
 //     numero.classList.add("erro");
 // };
 
-numero.innerHTML = "Processando..."
+numero.innerHTML = "Esperando click <br/>"
