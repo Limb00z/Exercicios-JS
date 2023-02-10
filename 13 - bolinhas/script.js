@@ -5,3 +5,9 @@ const btn_add = document.getElementById("btn_add");
 const btn_remover = document.getElementById('btn_remover')
 
 //console.log(palco,num_objetos,txt_qtde,btn_add,btn_remover);
+
+let larguraPalco = palco.offsetWidth;
+let alturaPalco = palco.offsetHeight;
+
+let bolas = [];
+let numBola = 0;
