@@ -1,5 +1,5 @@
 *{
-    background-color: rgb(255, 251, 251);
+    background-color: rgb(185, 185, 185);
     padding: 0;
     margin: 0 auto;
     border: none;
@@ -7,11 +7,24 @@
     font-size: large;
 }
 
-
-.div_relogio{
+.dflex{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.timer{
+    flex-direction: column;
+    width: 300px;
+    border-radius: 5px;
+    padding: 10px;
+    border: 30px solid #4694dd;
+    margin-top: 50px;
+}
+
+
+.div_relogio{
+    
     width: 200px;
     background-color: #444;
     color: #0f0;
@@ -19,5 +32,27 @@
     font-size: larger;
     padding: 10px;
     border-radius: 5px;
-    margin-top: 200px;
+    margin-bottom: 20px;
+}
+
+input[type='number']{
+    border: 1px solid #000;
+    font-size: larger;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+    width: 200px;
+}
+
+button{
+    background-color: #aaa;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.alarme{
+    background-color: #f00 !important;
 }
