@@ -1,6 +1,24 @@
 const div_relogio = document.querySelector(".div_relogio");  //Capturando a div
 //console.log(div_relogio);
 
+const som_alarme = document.querySelector("#som_alarme");
+//console.log(som_alarme);
+
+const btn_ativar = document.querySelector("#btn_ativar");
+//console.log(btn_ativar);
+
+const btn_parar = document.querySelector("btn_parar");
+//console.log(btn_parar);
+
+const tmp_alarme = document.querySelector("#tmp_alarme");
+//console.log(tmp_alarme);
+
+const hora_alarme = document.querySelector("#hora_alarme");
+//console.log(hora_alarme);
+
+const timer = document.querySelector("#alarme");
+//console.log(timer);
+
 
 const relogio = () => {
    
