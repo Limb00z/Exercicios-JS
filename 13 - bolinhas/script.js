@@ -11,3 +11,22 @@ let alturaPalco = palco.offsetHeight;
 
 let bolas = [];
 let numBola = 0;
+
+window.addEventListener("resize", (evento) => {
+    //console.log('teste');
+    larguraPalco = palco.offsetWidth;
+    alturaPalco = palco.offsetHeight;
+})
+
+btn_add.addEventListener("click", (evento) => {
+    const qtde = txt_qtde.ariaValueMax;
+    for (let i = 0; i < qtde; i++){
+        //instanciar novas bolinhas
+    }
+});
+
+btn_remover.addEventListener("click", (evento) => {
+    bolas.map((b) => {
+        //remover a bolinha
+    })
+});
