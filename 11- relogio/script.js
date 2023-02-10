@@ -6,7 +6,7 @@ const div_relogio = document.querySelector(".div_relogio");  //Capturando a div
 const btn_ativar = document.querySelector("#btn_ativar");
 //console.log(btn_ativar);
 
-const btn_parar = document.querySelector("btn_parar");
+const btn_parar = document.querySelector("#btn_parar");
 //console.log(btn_parar);
 
 const tmp_alarme = document.querySelector("#tmp_alarme");
@@ -15,8 +15,35 @@ const tmp_alarme = document.querySelector("#tmp_alarme");
 const hora_alarme = document.querySelector("#hora_alarme");
 //console.log(hora_alarme);
 
-const timer = document.querySelector("#alarme");
+const timer = document.getElementById("timer");
 //console.log(timer);
+
+let som_alarme = new Audio("alarme.mp3");
+som_alarme.loop = -1;
+
+let ts_atual = null; //timestamp
+let ts_alarme = null;
+
+let alarme_ativado = false;
+let alarme_tocando = false;
+
+btn_ativar.addEventListener("click", () => {
+    ts_atual = Date.now();
+    ts_alarme = ts_atual + (tmp_alarme.value * 1000);
+    alarme_ativado = true;
+    const dt_alarme = new Date(ts_alarme);
+    hora_alarme.innerHTML = `Hora do Alarme: ${dt_alarme.getHours()}:${dt_alarme.getMinutes()}:${dt_alarme.getSeconds()}`
+});
+
+btn_parar.addEventListener("click", () => {
+    alarme_tocando = false;
+    alarme_ativado = false;
+    hora_alarme.innerHTML = "Hora do Alarme:";
+    tmp_alarme.value = 0;
+    timer.classList.remove("alarme");
+    som_alarme.pause();
+    som_alarme.currentTime = 0;
+});
 
 
 const relogio = () => {
@@ -40,6 +67,14 @@ const relogio = () => {
     //console.log(horaCompleta);
 
     div_relogio.innerHTML = horaCompleta;  // Transferindo para tela, onde capituramos a div
+
+    if (alarme_ativado && !alarme_tocando) {
+        if (data.getTime() >= ts_alarme) {
+            alarme_tocando = true;
+            som_alarme.play();
+            timer.classList.add('alarme');
+        }
+    }
 
 
 }
