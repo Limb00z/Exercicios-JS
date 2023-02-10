@@ -1,8 +1,7 @@
 const div_relogio = document.querySelector(".div_relogio");  //Capturando a div
 //console.log(div_relogio);
 
-const som_alarme = document.querySelector("#som_alarme");
-//console.log(som_alarme);
+//console.log(som_alarme será add via JS puro);
 
 const btn_ativar = document.querySelector("#btn_ativar");
 //console.log(btn_ativar);
