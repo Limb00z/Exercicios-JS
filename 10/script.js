@@ -6,22 +6,22 @@ console.log(btn_promessa);
 
 
 const promessa = () => {
-    let p = new Promise((resolvido, rejeitado) => {
+    let p = new Promise((resolve, reject) => {
         let resultado = true;
-        let tempo = 3000;
+        let tempo = 3000; //3s para a execução!
         setTimeout(() => {
             if (resultado) {
-                resolvido("Deu tudo certo");
+                resolve("Deu tudo certo");
                 numero.innerHTML = "Deu tudo certo";
                 numero.classList.remove("erro");
                 numero.classList.add("ok");
             } else {
-                rejeitado("Deu tudo errado")
+                reject("Deu tudo errado")
                 numero.innerHTML = "Deu tudo errado";
                 numero.classList.remove("ok");
                 numero.classList.add("erro");
             }
-        }, tempo);
+        }, tempo ); //olha o tempo de execução aqui.
     });
 
     
