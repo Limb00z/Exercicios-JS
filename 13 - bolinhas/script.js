@@ -53,7 +53,7 @@ class Bola {
         const div = document.createElement("div");
         div.setAttribute("id", this.id);
         div.setAttribute("class", "bola");
-        div.setAttribute("style", `left: ${this.px}; top:${this.py}; width:${this.tam}; height:${this.tam}; background-color:rgb(${this.r},${this.g},${this.b});`);
+        div.setAttribute("style", `left: ${this.px}px; top:${this.py}px; width:${this.tam}px; height:${this.tam}px; background-color:rgb(${this.r},${this.g},${this.b});`);
         this.palco.appendChild(div);
     }
 
@@ -76,10 +76,10 @@ class Bola {
     }
 
     controlar = () => {
-        controle_bordas();
+        this.controle_bordas();
         this.px += this.dirx * this.velx;
         this.py += this.diry * this.vely; 
-        this.eu.setAttribute("style", `left: ${this.px}; top:${this.py}; width:${this.tam}; height:${this.tam}; background-color:rgb(${this.r},${this.g},${this.b});`);
+        this.eu.setAttribute("style", `left: ${this.px}px; top:${this.py}px; width:${this.tam}px; height:${this.tam}px; background-color:rgb(${this.r},${this.g},${this.b});`);
         if ((this.px > larguraPalco) || (this.py > alturaPalco)){
             this.remover();
         };
@@ -93,7 +93,7 @@ window.addEventListener("resize", (evento) => {
 })
 
 btn_add.addEventListener("click", (evento) => {
-    const qtde = txt_qtde.ariaValueMax;
+    const qtde = txt_qtde.value;
     for (let i = 0; i < qtde; i++){
        bolas.push(new Bola(bolas, palco));
     }
