@@ -29,14 +29,24 @@ class Bola {
         this.id = Date.now() + "_" + Math.floor(Math.random() * 999999999999999999999);
         this.desenhar();
         this.controle = setInterval(this.controlar, 10);
-        this.eu = document.getElementById(this.id)
+        this.eu = document.getElementById(this.id);
+        numBola++;
+        num_objetos.innerHTML = numBola;
     }
     minhaPos = () => {
-        
+        return this.arrayBolas.indexOf(this)
     }
 
     remover = () => {
-        
+        clearInterval(this.controle);
+        bolas = bolas.filter((b) => {
+            if (b.id != this.id) {
+                return b;
+            };
+        });
+        this.eu.remove();
+        numBola--;
+        num_objetos.innerHTML = numBola;
     }
 
     desenhar = () => {
