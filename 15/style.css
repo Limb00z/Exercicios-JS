@@ -13,5 +13,5 @@ button{
 }
 
 button:hover{
-    outline: 3pc solid #f00;
+    outline: 3px solid #f00;
 }
