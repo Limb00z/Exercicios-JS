@@ -17,6 +17,8 @@ btn_imp.addEventListener("click", (evento) => {
     win.document.write("</head>");
     win.document.write("<body>");
     win.document.write(conteudo);
+    win.document.write("<h2>Este é o conteúdo para impressão </h2>");
+    win.document.write("<h4>Você pode editar o que quiser e como quiser! </h4>");
     win.document.write("</body></html>");
 
     win.print();
