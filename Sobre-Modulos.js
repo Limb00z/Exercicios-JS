@@ -25,7 +25,13 @@
         ex:
             console.log(somar);
 
-           
+        Nós podemos ainda, também, renomear tudo de uma vez, usando o asterisco *.
+        ex:
+            import * as m_cursos from "./modulos/cursos.js"
+        
+        Quando,formos selecionar qualquer elemento que tenhamos exportado, basta chamar pelo nome geral com um ponto e o que queremos. 
+        ex:
+            console.log(m_cursos.listaCursos);
 
 
 
