@@ -16,6 +16,14 @@
 
                 import mostraResultado,{calcular} from "./modulos/calcular.js"
             //Lembrando que não precisa ser junto a importação do default e dos demais elementos, podem ser importados em linhas diferentes.
+        
+        Usando O ALIAS -- Podemos renomear qualquer import usando o "as" como no banco de dados.
+        ex:
+            import {calcular as somar} from "./modulos/calcular.js"
+
+        E ai quando formos chamar, basta chamarmos pelo novo nome.
+        ex:
+            console.log(somar);
 
            
 
