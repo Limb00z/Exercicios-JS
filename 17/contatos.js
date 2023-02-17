@@ -20,7 +20,7 @@ let contato = {
         contatos.forEach((c, indice) => {
             
             const btn_remover = document.createElement('button')
-            btn_remover.setAttribute('id', 'btn_' + indice);
+            btn_remover.setAttribute('id', `btn_${indice}`);
 
             const div = document.createElement('div');
             div.setAttribute('class', 'contato');
