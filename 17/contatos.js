@@ -8,6 +8,14 @@ let contato = {
         return contatos[i_cont]
     },
     addContato: function (novoContato, destinoDOM) {
+        const cont = {
+            nome: novoContato.nome,
+            telefone: novoContato.telefone,
+            email: novoContato.email
+        }
+        
+        contatos.push(cont)
+        
         const div = document.createElement('div');
         div.setAttribute("class", "contato");
 
@@ -23,6 +31,7 @@ let contato = {
         div.appendChild(p_email);
 
         destinoDOM.appendChild(div)
+
     }
 };
 
