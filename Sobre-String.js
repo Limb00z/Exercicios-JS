@@ -27,6 +27,7 @@
             Por exemplo:
                 const palavra="Estudo"
                 console.log(palavra.indexOf("o")) //5 
+            obs: fique atento caso o caractere que se busca na string seja encontrado em mais de uma posição, pois será retornada somente a primeira ocorrência.
         
 
 
