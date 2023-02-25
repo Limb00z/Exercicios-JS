@@ -29,6 +29,14 @@
                 console.log(palavra.indexOf("o")) //5 
             obs: fique atento caso o caractere que se busca na string seja encontrado em mais de uma posição, pois será retornada somente a primeira ocorrência.
             obs²: O resultado da execução do indexOf() é um valor numérico.
+
+        toUpperCase() e toLowerCase()
+
+            São duas funções bastante utilizadas quando estamos trabalhando com string e precisamos deixar o texto todo em letras minúsculas (lower case) ou todo em maiúsculas (upper case). Vamos ver o código abaixo:
+                const palavra = "Estudo";
+                console.log(palavra.toLowerCase()); //"estudo";
+                console.log(palavra.toUpperCase()); //"ESTUDO";
+                
         
 
 
