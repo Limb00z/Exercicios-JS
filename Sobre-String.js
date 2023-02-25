@@ -125,10 +125,18 @@
             ex:
              
                 const author = 'George Orwell';
-                const userSearchTerml = 'George';
-                const userSearchTerm2 = 'Douglas';
-                console. log( author. includes(userSearchTerm1)); // true
-                console. log( (author. includes(userSearchTerm2)); // false
+                const procuraNome = 'George';
+                const procuraSobreNome = 'Douglas';
+                console. log( author. includes(procuraNome)); // true
+                console. log( author. includes(procuraSobreNome)); // false
+
+        charCodeAt()
+            O método retorna o unicode do caractere em um índice especificado em uma cadeia de caracteres. Este é um inteiro de cone UTF-16 entre 0 e 65535.
+            ex:
+                const str = "Hello World";
+                console. log(str charCodeAt(0));
+                console. log(str. charCodeAt(8)); // 114;
+
 
 
 */
