@@ -68,6 +68,11 @@
 
             obs: Na execução deste exemplo, a string nomeusuario será substituída pelo conteúdo da variável nome. Como resultado da execução do método replace() teremos uma nova string.
             obs²: Ele apenas substituirá a primeira string encontrada, mesmo que ajam mais de uma.
+            obs: Caso queiramos mudar todas as palavras que buscamos, devemos usar regex. usando /{palavra}/g ex:
+            
+                const frase = 'Frase que começa com um palavra-feia e tem outra palavra-feia no final'
+                const fraseAtualizada = frase.replace(/palavra-feia/g, '********') 
+                console.log(fraseAtualizada)
 
         concat()
 
