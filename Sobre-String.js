@@ -49,8 +49,14 @@
         slice()
             Ele faz a mesma coisa que o substr(), não muda em anda!
                 
-        
+        replace()
 
+            Com a função replace() temos a possibilidade de substituir parte de uma string por outra. Essa função recebe como parâmetros duas informações: a string que você quer substituir e a string que será colocada no lugar. Olhe o exemplo abaixo, em que precisamos substituir a string nomeusuario no texto padrão de comunicacao.
+                let nome = "André";
+                let comunicacao = " Olá, sr. nomeusurario, informamos que a partir da presente data o senhor tem 50% de desconto em nossa loja.";
+                console.log(comunicacao.replace("nomeusurario",nome));
+            obs: Na execução deste exemplo, a string nomeusuario será substituída pelo conteúdo da variável nome. Como resultado da execução do método replace() teremos uma nova string.
+            obs²: Ele apenas substituirá a primeira string encontrada, mesmo que ajam mais de uma.
 
 
 */
