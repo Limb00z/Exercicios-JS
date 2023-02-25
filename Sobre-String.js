@@ -45,6 +45,9 @@
             A função recebe como parâmetro o início e o fim da nova string a ser retirada da string principal. Na execução do código acima, temos como resultado a palavra Mergulhando. Bem útil, né?
 
             obs: O resultado da execução do métodosubstr() é uma nova string.
+
+        slice()
+            Ele faz a mesma coisa que o substr(), não muda em anda!
                 
         
 
