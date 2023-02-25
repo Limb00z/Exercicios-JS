@@ -36,6 +36,15 @@
                 const palavra = "Estudo";
                 console.log(palavra.toLowerCase()); //"estudo";
                 console.log(palavra.toUpperCase()); //"ESTUDO";
+
+        substr()
+
+            Outra função muito interessante é a substr() (substring), que permite que façamos a extração de parte de uma string, conforme o código abaixo:
+                let frase= "Mergulhando em tecnologia."
+                console.log(frase.substr(0,11)); // "Mergulhando"
+            A função recebe como parâmetro o início e o fim da nova string a ser retirada da string principal. Na execução do código acima, temos como resultado a palavra Mergulhando. Bem útil, né?
+
+            obs: O resultado da execução do métodosubstr() é uma nova string.
                 
         
 
