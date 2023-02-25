@@ -16,11 +16,18 @@
             Com o método charAt() conseguimos acessar um caractere de uma string. Lembre-se que, por baixo dos panos, strings são arrays de caracteres, e em cada posição temos o caractere que compõe a string.
             Veja o exemplo abaixo:
                 console.log("Estudo".charAt(3)) ou console.log(palavra.charAt(3))  //"u"
-        obs: Outra alternativa será usar a notação de colchetes para encontrar um caractere da string, da seguinte forma:
+            obs: Outra alternativa será usar a notação de colchetes para encontrar um caractere da string, da seguinte forma:
                 console.log(palavra[0]) //"E"
 
+        Mas e se quisermos saber qual a posição de um caractere dentro da string?
 
+        indexOf()
 
+            Respondendo a pergunta anterior, existe a função indexOf(), que retorna a posição de um caractere dentro da string.
+            Por exemplo:
+                const palavra="Estudo"
+                console.log(palavra.indexOf("o")) //5 
+        
 
 
 
