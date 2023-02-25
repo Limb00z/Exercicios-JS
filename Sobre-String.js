@@ -15,7 +15,7 @@
 
             Com o método charAt() conseguimos acessar um caractere de uma string. Lembre-se que, por baixo dos panos, strings são arrays de caracteres, e em cada posição temos o caractere que compõe a string.
             Veja o exemplo abaixo:
-                console.log("alura".charAt(3)) //r
+                console.log("estudo".charAt(3)) //u
         
 
 
