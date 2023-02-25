@@ -70,4 +70,29 @@
             O resultado obtido será: Programe nas principais linguagens e plataformas. Explore linguagens como JavaScript, Python, e C#.
 
             Para a execução do método concat() teremos como resultado uma nova string.
-*/
+
+        split()
+
+            O método split() é bem interessante, pois com ele conseguimos quebrar uma string com base em caracteres separadores que vamos informar para o método como parâmetro.
+
+            Vamos ver um exemplo:
+
+                let linguagens = "JavaScript;Java;C#;PHP;Python;Go;Vb;SQL;C;C++";
+                let arrayLinguagens = linguagens.split(";");
+                console.log(arrayLinguagens)
+                
+            Quando trabalhamos com o split(), devemos nos atentar, pois a execução gerará como resultado um array de strings com os elementos que foram separados com base no separador desejado. Portanto a execução do código resulta em um array como mostrado a seguir:
+
+                [ 'JavaScript',
+                'Java',
+                'C#',
+                'PHP',
+                'Python',
+                'Go',
+                'Vb',
+                'SQL',
+                'C',
+                'C++' ]
+
+            Lembre-se que o resultado da execução do método split() é um array de strings.
+            */
