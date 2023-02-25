@@ -58,5 +58,16 @@
             obs: Na execução deste exemplo, a string nomeusuario será substituída pelo conteúdo da variável nome. Como resultado da execução do método replace() teremos uma nova string.
             obs²: Ele apenas substituirá a primeira string encontrada, mesmo que ajam mais de uma.
 
+        concat()
 
+            O método concat() é uma opção para concatenar strings sem a utilização do operador de adição (+). Ele concatena duas strings, adicionando a nova string ao fim da anterior.
+
+            Observe uma utilização do concat():
+
+                let novaString = "Programe nas principais linguagens e plataformas. Explore linguagens como ";
+                console.log(novaString.concat("JavaScript,").concat(" Python,").concat(" e C#."))
+                
+            O resultado obtido será: Programe nas principais linguagens e plataformas. Explore linguagens como JavaScript, Python, e C#.
+
+            Para a execução do método concat() teremos como resultado uma nova string.
 */
