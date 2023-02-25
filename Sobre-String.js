@@ -120,6 +120,15 @@
 
             No JavaScript ainda temos algumas variações desta função como: trimEnd(),trimStart(),trimLeft() e trimRight(), teste também estas variantes e veja o resultado obtido, ok?
 
+        includes()
+            O metodo, faz uma verificação, retornando um booleano, se um determinado string, está dentro desse outro string na váriavel. 
+            ex:
+             
+                const author = 'George Orwell';
+                const userSearchTerml = 'George';
+                const userSearchTerm2 = 'Douglas';
+                console. log( author. includes(userSearchTerm1)); // true
+                console. log( (author. includes(userSearchTerm2)); // false
 
 
 */
