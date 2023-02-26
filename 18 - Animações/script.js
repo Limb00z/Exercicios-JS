@@ -68,12 +68,17 @@ document.addEventListener("keydown", (evento) => {
             break;
         
         case "ArrowDown":
-            clearTimeout(anima);
+            carro.style.height = parseInt(carro.style.height) - 10 + "px";
+            carro.style.width = parseInt(carro.style.width) - 10 + "px";
             break;
         
         case "ArrowUp":
-            clearTimeout(anima);
+            carro.style.height = parseInt(carro.style.height) + 10 + "px";
+            carro.style.width = parseInt(carro.style.width) + 10 + "px";
             break;
+        
+        case "Enter":
+            clearTimeout(anima);           
         
         default:
             break;
