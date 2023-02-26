@@ -14,13 +14,7 @@ const info = (el) => {
     altura.innerHTML = `altura: ${DOMRect_q.height}`;
 }
 
-q1.addEventListener("click", (evento) => {
-    info(q1);
+window.addEventListener("click", (evento) => {
+    info(evento.target);
 });
-
-q2.addEventListener("click", (evento) => {
-    info(q2);
-});
-
-
 
