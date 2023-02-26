@@ -5,10 +5,22 @@ const posy = document.getElementById("posy");
 const largura = document.getElementById("largura");
 const altura = document.getElementById("altura");
 
-let DOMRect_q1 = q1.getBoundingClientRect();
 
-posx.innerHTML = `posx: ${DOMRect_q1.x}`;
-posy.innerHTML = `posy: ${DOMRect_q1.y}`;
-largura.innerHTML = `largura: ${DOMRect_q1.width}`;
-altura.innerHTML = `altura: ${DOMRect_q1.height}`;
+const info = (el) => {
+    let DOMRect_q = el.getBoundingClientRect();
+    posx.innerHTML = `posx: ${DOMRect_q.x}`;
+    posy.innerHTML = `posy: ${DOMRect_q.y}`;
+    largura.innerHTML = `largura: ${DOMRect_q.width}`;
+    altura.innerHTML = `altura: ${DOMRect_q.height}`;
+}
+
+q1.addEventListener("click", (evento) => {
+    info(q1);
+});
+
+q2.addEventListener("click", (evento) => {
+    info(q2);
+});
+
+
 
