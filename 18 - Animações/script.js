@@ -14,21 +14,22 @@ const init = () => {
 let anima = null;
 
 const move = (dir) => {
-    carro.style.left = parseInt(carro.style.left) + (10*dir) + "px";
+    carro.style.left = parseInt(carro.style.left) + (10 * dir) + "px";
+    anima = setTimeout(move, 50, dir);
 };
 
 btn_parar.addEventListener("click", () => {
-    clearInterval(anima);
+    clearTimeout(anima);
 })
 
 btn_esquerda.addEventListener("click", () => {
-    clearInterval(anima);
-    anima = setInterval(move, 50, -1);
+    clearTimeout(anima);
+    move(-1)
 });
 
 btn_direita.addEventListener("click", () => {
-    clearInterval(anima);
-    anima = setInterval(move, 50, 1);
+    clearTimeout(anima);
+    move(1)
 })
 
 document.addEventListener("keydown", (evento) => {
@@ -36,21 +37,21 @@ document.addEventListener("keydown", (evento) => {
 
     switch (evento.key) {
         case "ArrowLeft":
-            clearInterval(anima);
-            anima = setInterval(move, 50, -1);
+            clearTimeout(anima);
+            move(-1)
             break;
         
         case "ArrowRight":
-            clearInterval(anima);
-            anima = setInterval(move, 50, 1);
+            clearTimeout(anima);
+            move(1)
             break;
         
         case "ArrowDown":
-            clearInterval(anima);
+            clearTimeout(anima);
             break;
         
         case "ArrowUp":
-            clearInterval(anima);
+            clearTimeout(anima);
             break;
         
         default:
