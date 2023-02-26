@@ -4,6 +4,8 @@ const btn_parar = document.getElementById("btn_parar");
 const btn_direita = document.getElementById("btn_direita");
 
 
+
+
 //console.log(carro,btn_direita,btn_esquerda);
 
 const init = () => {
@@ -11,6 +13,7 @@ const init = () => {
     carro.style.left = "0px";
     carro.style.width = "100px";
     tamMax = window.innerWidth - parseInt(carro.style.width);
+    alert("Setas Esquerda ou Direita: andar \nSetas Cima e Baixo: tamanho do carro \nENTER: Parar o carro");
 };
 
 let anima = null;
