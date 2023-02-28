@@ -15,6 +15,6 @@ const info = (el) => {
 }
 
 window.addEventListener("click", (evento) => {
-    info(evento.target);
+    info(evento.target);// onde cliccar mostrará a posição
 });
 
