@@ -18,3 +18,4 @@ window.addEventListener("click", (evento) => {
     info(evento.target);// onde cliccar mostrará a posição
 });
 
+//finalização da aula
