@@ -3,8 +3,12 @@ const f_nota = document.getElementById("f_nota");
 const f_msg = document.getElementById("f_msg");
 
 document.querySelector("btn_validar").addEventListener("click", (evento) => {
-    let msg = null;
-
+    let estadoValidação = f_nota.validity;
+    
+    if (estadoValidação.valueMissing) {
+        f_nota.setCustomValidity("Campo vazio, cabeção")
+    }
+    f_nota.reportValidity();
 
     evento.preventDefault(); 
 });
@@ -27,6 +31,6 @@ stepMismatch: true, se o valor de um elemento for inválido por seu atributo ste
 typeMismatch: true, se o valor de um elemento não corresponder ao seu atributo type.
 tooLong: true, se o valor de um elemento exceder seu atributo maxLength.
 tooShort: true, se o valor de um elemento ficar menor que seu atributo minLength.
-valuedMissing: true, se um elemento(com um atributo obrigatório) não tiver valor.
+valueMissing: true, se um elemento(com um atributo obrigatório) não tiver valor.
 valid: ture, se o valor de um elemento for válido.
 */
