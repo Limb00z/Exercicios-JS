@@ -14,13 +14,17 @@ const endpoint = "https://testenodejs.limb00z.repl.co/";
 // })
 // })
 
-let atualizar = () => {
-    fetch(endpoint).then(res => res.json()).then(dados => {
-        console.log(dados);
-        p_temp.innerHTML = `Temperatura: ${dados.temperatura}`;
-        p_nivel.innerHTML = `Nível: ${dados.nivel}`;
-        p_press.innerHTML = `Pressão: ${dados.pressao}`;
-    })
-};
+// let atualizar = () => {
+//     if (document.getElementById("btn")) {
+//         document.getElementById("btn").remove(); //Se atualizar automaticamente, ele remove o botão de fetch
+//     };
 
-let intervalo = setInterval(atualizar,3000)
+//     fetch(endpoint).then(res => res.json()).then(dados => {
+//         console.log(dados);
+//         p_temp.innerHTML = `Temperatura: ${dados.temperatura}`;
+//         p_nivel.innerHTML = `Nível: ${dados.nivel}`;
+//         p_press.innerHTML = `Pressão: ${dados.pressao}`;
+//     })
+// };
+
+// let intervalo = setInterval(atualizar,3000)
