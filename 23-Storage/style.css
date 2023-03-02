@@ -20,3 +20,10 @@ button{
     background-color: #888;
     color: #fff;
 }
+
+#tela{
+    font-size: 100px;
+    margin: 100px;
+    width: 100%;
+    border:10px solid  #f00;
+}
