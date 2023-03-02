@@ -4,7 +4,14 @@ let tela = document.getElementById("tela");
 document.getElementById("btn_texto").addEventListener("click", (evento) => {
     
     localStorage.setItem("algumaCoisa", f_texto.value);
-    tela.innerHTML = `${localStorage.getItem("algumaCoisa")}`
+    tela.innerHTML = `${localStorage.getItem("algumaCoisa")}`;
+
+    localStorage.setItem("maisCoisas","ItemAleatório")
+
+
+
+    alert(localStorage.length)
+
 
     
 });
